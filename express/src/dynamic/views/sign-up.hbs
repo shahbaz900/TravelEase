@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url("files/mountain1.jpg");
+            background-size: cover;
+            background-position: left top;
+            padding-top: 120px;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: white;
+            box-shadow: 15px 15px 30px rgba(0, 0, 0, 15%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            width: 60px;
+            margin: 2vh;
+            margin-left: 5%;
+        }
+
+        .navbar {
+            display: block;
+            margin-right: 8vh;
+        }
+
+        .navbar a {
+            color: rgb(5, 5, 5);
+            font-size: 18px;
+            padding: 15px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: ease 0.4s;
+        }
+
+        .navbar a:hover {
+            background-color: #eee;
+        }
+
+        .wrapper {
+    width: 80%;
+    max-width: 400px;
+    margin: auto; /* Center the form horizontally */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+        .h5 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .destination {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .destination span {
+            font-weight: 600;
+        }
+
+        .destination span a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .destination span a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+{{>navbar}}
+
+<div class="wrapper">
+    <h5 class="h5">Sign Up</h5>
+    <form action="/sign-up" method="POST">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirmpass" placeholder="Confirm your password" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn" value="Register">Sign Up</button>
+        </div>
+    </form>
+    <p class="destination">Already have an account? <span><a href="Sign-in">Sign In</a></span></p>
+</div>
+</body>
+</html>

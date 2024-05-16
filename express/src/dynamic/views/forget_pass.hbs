@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url("files/nature.jpg"); /* Change this URL to your background image */
+            background-size: cover;
+            background-position: left top;
+            padding-top: 120px; /* Adjust padding to make space for the navbar */
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0; /* Position at the top of the screen */
+            background: white;
+            box-shadow: 15px 15px 30px rgba(0, 0, 0, 15%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000; /* Ensure navigation is above other content */
+        }
+
+        .logo {
+            display: flex;
+            width: 60px;
+            margin: 2vh;
+            margin-left: 5%;
+        }
+
+        .navbar {
+            display: block;
+            margin-right: 8vh;
+        }
+
+        .navbar a {
+            color: rgb(5, 5, 5);
+            font-size: 18px;
+            padding: 15px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: ease 0.4s;
+        }
+
+        .navbar a:hover {
+            background-color: #eee; /* Change background color on hover */
+        }
+
+        .wrapper {
+            width: 80%; /* Adjust the width as needed */
+            max-width: 400px; /* Maximum width of the form */
+            margin: auto; /* Center the form */
+            padding: 22px; /* Adjust padding for the form */
+            border: 1px solid #ccc;
+            border-radius: 10px; /* Increase border radius for smoother edges */
+            background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visual effect */
+            text-align: center; /* Center align text */
+        }
+
+        .h5 {
+            font-size: 2rem; /* Increase font size for the header */
+            font-weight: 600;
+            margin-bottom: 30px; /* Increase margin bottom for spacing */
+        }
+
+        .form-group {
+            margin-bottom: 30px; /* Increase margin bottom for spacing */
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            font-size: 1.2rem; /* Increase font size for the label */
+            margin-bottom: 10px; /* Increase margin bottom for spacing */
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px; /* Increase padding for input fields */
+            border: 1px solid #ccc;
+            border-radius: 8px; /* Increase border radius for smoother edges */
+            font-size: 1.2rem; /* Increase font size for input fields */
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .destination {
+            font-size: 1.1rem; /* Increase font size for the destination text */
+        }
+
+        .destination span {
+            font-weight: 600;
+        }
+
+        .destination span a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .destination span a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+{{>navbar}}
+
+<div class="wrapper">
+    <h5 class="h5">Forgot Password</h5>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn">Reset Password</button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn">Resend Verification</button>
+        </div>
+    </form>
+    <p class="destination">Remembered your password? <span><a href="./sign-in">Sign In</a></span></p>
+</div>
+{{!-- {{>footer}} --}}
+</body>
+</html>
